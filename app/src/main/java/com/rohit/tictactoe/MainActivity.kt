@@ -1,13 +1,11 @@
 package com.rohit.tictactoe
 
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Button
 import android.widget.ImageButton
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
@@ -28,6 +26,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+        //supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        //supportActionBar?.setIcon(R.drawable.app_icon)
 
         reset_game.setOnClickListener { resetGame() }
     }
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         btn_7.setImageResource(0)
         btn_8.setImageResource(0)
         player_winner.text = null
-        player_turn.text = "X's move"
+        player_turn.text = getString(R.string.x_move)
     }
 
     /**
@@ -92,12 +92,12 @@ class MainActivity : AppCompatActivity() {
         if(!markedBoxes.contains(tag)) {
             if (isXTurn) {
                 btn.setImageResource(R.drawable.cross)
-                player_turn.text = getString(R.string.x_move)
+                player_turn.text = getString(R.string.o_move)
                 xMarkedBoxes.add(tag)
             }
             else {
                 btn.setImageResource(R.drawable.circle)
-                player_turn.text = getString(R.string.o_move)
+                player_turn.text = getString(R.string.x_move)
                 oMarkedBoxes.add(tag)
             }
 
