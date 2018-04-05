@@ -8,6 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
@@ -27,11 +28,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
 
         reset_game.setOnClickListener { resetGame() }
     }
@@ -61,15 +57,15 @@ class MainActivity : AppCompatActivity() {
         oMarkedBoxes = ArrayList()
         isXTurn = true
         hasFoundWinner = false
-        btn_0.text = null
-        btn_1.text = null
-        btn_2.text = null
-        btn_3.text = null
-        btn_4.text = null
-        btn_5.text = null
-        btn_6.text = null
-        btn_7.text = null
-        btn_8.text = null
+        btn_0.setImageResource(0)
+        btn_1.setImageResource(0)
+        btn_2.setImageResource(0)
+        btn_3.setImageResource(0)
+        btn_4.setImageResource(0)
+        btn_5.setImageResource(0)
+        btn_6.setImageResource(0)
+        btn_7.setImageResource(0)
+        btn_8.setImageResource(0)
         player_winner.text = null
         player_turn.text = "X's move"
     }
@@ -81,7 +77,7 @@ class MainActivity : AppCompatActivity() {
         if(hasFoundWinner)
             return
 
-        val btn: Button = v as Button
+        val btn = v as ImageButton
         val tag:Int
 
         try {
@@ -95,12 +91,12 @@ class MainActivity : AppCompatActivity() {
 
         if(!markedBoxes.contains(tag)) {
             if (isXTurn) {
-                btn.text = "X"
+                btn.setImageResource(R.drawable.cross)
                 player_turn.text = getString(R.string.x_move)
                 xMarkedBoxes.add(tag)
             }
             else {
-                btn.text = "O"
+                btn.setImageResource(R.drawable.circle)
                 player_turn.text = getString(R.string.o_move)
                 oMarkedBoxes.add(tag)
             }

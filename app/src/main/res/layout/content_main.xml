@@ -19,81 +19,81 @@
         android:layout_marginStart="25dp"
         android:text="X's move"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="bold"/>
 
     <TableLayout
-        android:layout_width="180dp"
-        android:layout_height="180dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_gravity="center"
         android:stretchColumns="0,1,2">
 
         <TableRow>
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_0"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:onClick="onMark"
             android:tag="0"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_1"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:onClick="onMark"
             android:tag="1"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:onClick="onMark"
             android:tag="2"/>
         </TableRow>
         <TableRow>
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn_3"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:onClick="onMark"
                 android:tag="3"/>
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn_4"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:onClick="onMark"
                 android:tag="4"/>
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn_5"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:onClick="onMark"
                 android:tag="5"/>
         </TableRow>
         <TableRow>
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn_6"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:onClick="onMark"
                 android:tag="6"/>
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn_7"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:onClick="onMark"
                 android:tag="7"/>
 
-            <Button
+            <ImageButton
                 android:id="@+id/btn_8"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:onClick="onMark"
                 android:tag="8"/>
         </TableRow>
@@ -106,14 +106,18 @@
         android:layout_marginLeft="25dp"
         android:layout_marginStart="25dp"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/reset_game"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_gravity="center"
-        android:text="Reset"/>
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="New Game"/>
 
 </LinearLayout>
